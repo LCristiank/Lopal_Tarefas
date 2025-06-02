@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+
 import br.dev.luan.tarefas.dao.FuncionarioDAO;
 import br.dev.luan.tarefas.gui.FrameListFuncionario;
 import br.dev.luan.tarefas.gui.FrameUser;
@@ -23,7 +26,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		new FrameListFuncionario();
-		
+//		new FrameUser();
+
 	}
 	
 	private static void gravarArquivo() {

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -28,18 +29,19 @@ public class FrameUser {
 	private JButton btnSalvar;
 	private JButton btnSair;
 	
-	public FrameUser() {
-		criarTela();
+	public FrameUser(JFrame telaLista) {
+		criarTela(telaLista);
 	}
 	
-	private void criarTela() {
-		JFrame tela = new JFrame();
+	private void criarTela(JFrame telaLista) {
+		JDialog tela = new JDialog(telaLista, "", true);
 		
 		tela.setLayout(null);
 		tela.setSize(400, 400);
 		tela.setResizable(false);
-		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		tela.setLocationRelativeTo(telaLista
+				);
 		labelCodigo = new JLabel("Código");
 		labelCodigo.setBounds(20, 20, 200, 30);
 		txtCodigo = new JTextField();

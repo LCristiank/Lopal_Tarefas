@@ -1,6 +1,5 @@
 package br.dev.luan.tarefas.model;
 
-import br.dev.luan.tarefas.utils.Utils;
 
 public class Funcionario {
 	private String codigo;
