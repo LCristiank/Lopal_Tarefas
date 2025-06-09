@@ -14,7 +14,7 @@ public class TaskFileFactory {
 	private FileReader fr;
 	private BufferedReader br;
 	
-	private String pathTarefas = "C:\\Users\\25132588\\Tasks\\tarefas.csv";
+	private String pathTarefas = "C:\\Users\\25132588\\Tasks\\tarefs.csv";
 	
 	public BufferedReader getBufferedReader() throws FileNotFoundException, IOException {
 		fr = new FileReader(pathTarefas);

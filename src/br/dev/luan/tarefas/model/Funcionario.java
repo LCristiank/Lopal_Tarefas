@@ -6,6 +6,7 @@ public class Funcionario {
 	private String nome;
 	private String telefone;
 	private String email;
+	public Funcionario[] tarefa;
 	
 	public String getCodigo() {
 		return codigo;

@@ -77,7 +77,13 @@ public class FrameListEmployee {
 			linha++;
 		}
 		
-		tableFuncionario = new JTable(dados, colunas);
+		tableFuncionario = new JTable(dados, colunas) {
+			@Override
+			public boolean isCellEditable(int rowIndex, int colIndex) {
+				return false;
+			}
+		};
+		
 	
 		scrollFuncionarios = new JScrollPane(tableFuncionario);
 		scrollFuncionarios.setBounds(10, 70, 500, 300);

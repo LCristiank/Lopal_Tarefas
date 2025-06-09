@@ -2,6 +2,8 @@ package br.dev.luan.tarefas.dao;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,14 +37,15 @@ public class TaskDAO {
 			
 			BufferedReader br = ff.getBufferedReader();
 			String linha = br.readLine();
-			do {
+		
+			do {	
 				linha = br.readLine();
 				String tarefa[] = linha != null ? linha.split(",") : null;
 				
 				Tarefa t = new Tarefa();
 				t.setCodigo(tarefa[0]);
 				t.setTitulo(tarefa[1]);
-				t.setResponsavel(funcionario);
+				t.setDescricao(tarefa[2]);
 				
 				tarefas.add(t);
 			} while(linha != null);

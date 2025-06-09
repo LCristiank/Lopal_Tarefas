@@ -40,8 +40,7 @@ public class FrameUser {
 		tela.setSize(400, 400);
 		tela.setResizable(false);
 		tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		tela.setLocationRelativeTo(telaLista
-				);
+		tela.setLocationRelativeTo(telaLista);
 		labelCodigo = new JLabel("Código");
 		labelCodigo.setBounds(20, 20, 200, 30);
 		txtCodigo = new JTextField();
