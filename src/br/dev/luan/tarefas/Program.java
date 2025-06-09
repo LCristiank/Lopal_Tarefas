@@ -12,8 +12,9 @@ import java.util.List;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
-import br.dev.luan.tarefas.dao.FuncionarioDAO;
-import br.dev.luan.tarefas.gui.FrameListFuncionario;
+import br.dev.luan.tarefas.dao.EmployeeDAO;
+import br.dev.luan.tarefas.gui.FrameListEmployee;
+import br.dev.luan.tarefas.gui.FrameListTasks;
 import br.dev.luan.tarefas.gui.FrameUser;
 import br.dev.luan.tarefas.model.Funcionario;
 import br.dev.luan.tarefas.model.Tarefa;
@@ -22,65 +23,13 @@ import br.dev.luan.tarefas.utils.Utils;
 public class Program {
 	
 	// duas barras para não dar erro no encontro do arquivo (\ é chamada de scape)
-	private static String path = "C:\\Users\\25132656\\tarefa\\tarefas.txt";
+	private static String path = "C:\\Users\\25132656\\tarefa\\tarefa.txt";
 
 	public static void main(String[] args) {
-		new FrameListFuncionario();
+//		new FrameListEmployee();
+		new FrameListTasks();
 //		new FrameUser();
 
-	}
-	
-	private static void gravarArquivo() {
-		// file/arquivo
-		FileWriter file = null;
-		// writer/escritor
-		BufferedWriter writer = null;
-		
-		try {
-			
-			// true ativa o modo append (adicionar)
-			file = new FileWriter(path, true);
-			writer = new BufferedWriter(file);
-			
-			writer.write("Essa é outra nova linha!!\n");
-			
-			// flush serve para não reescrever o arquivo
-			// flush é descarga da memória ram para o hd
-			writer.flush();
-			
-		} catch (Exception erro) {
-			System.out.println(erro.getMessage());
-		}
-		
-	}
-
-	private static void lerArquivo() {
-		
-		// abrir o arquivo para leitura
-		FileReader file = null;
-		BufferedReader buffer = null;
-		try {
-			 file = new FileReader(path);
-			 buffer = new BufferedReader(file);
-			 
-			 // após ler uma linha ele passa para a próxima
-			 String linha = buffer.readLine();
-			 
-			 while (linha != null) {
-				 System.out.println(linha);
-				 linha = buffer.readLine();
-			 }
-			 
-		} catch (FileNotFoundException erro) {
-			System.out.println("Arquivo não achado!");
-			System.out.println(erro.getMessage());
-		} catch (IOException erro) {
-			System.out.println("Você não pode ler o arquivo!");
-			System.out.println(erro.getMessage());
-		} catch (Exception erro) {
-			System.out.println("Erro genérico!");
-			System.out.println(erro.getMessage());
-		}
 	}
 
 }

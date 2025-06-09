@@ -6,15 +6,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.dev.luan.tarefas.factory.FileFactory;
+import br.dev.luan.tarefas.factory.EmployeeFileFactory;
 import br.dev.luan.tarefas.model.Funcionario;
 
-public class FuncionarioDAO {
+public class EmployeeDAO {
 	private Funcionario funcionario;
-	private FileFactory ff = new FileFactory();
+	private EmployeeFileFactory ff = new EmployeeFileFactory();
 
 	// Método Construtor
-	public FuncionarioDAO(Funcionario funcionario) {
+	public EmployeeDAO(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
 

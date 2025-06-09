@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileFactory {
+public class EmployeeFileFactory {
 	private FileWriter fw;
 	private BufferedWriter bw;
 	
@@ -26,7 +26,6 @@ public class FileFactory {
 
 		fw = new FileWriter(pathFuncionarios, true);
 		bw = new BufferedWriter(fw);
-
 		return bw;
 
 	}

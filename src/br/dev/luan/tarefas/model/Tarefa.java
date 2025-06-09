@@ -3,16 +3,22 @@ package br.dev.luan.tarefas.model;
 import java.time.LocalDateTime;
 
 public class Tarefa {
-	private int codigo;
+
+	private String codigo;
 	private String titulo;
 	private String descricao;
 	private LocalDateTime dataInicio;
 	private LocalDateTime dataPrazo;
 	private LocalDateTime dataConclusao;
 	private Funcionario responsavel;
+	private Status status;
 	
-	public Tarefa(String titulo, String descrica) {
-		
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getTitulo() {
@@ -47,6 +53,14 @@ public class Tarefa {
 		this.dataPrazo = dataPrazo;
 	}
 
+	public LocalDateTime getDataConclusao() {
+		return dataConclusao;
+	}
+
+	public void setDataConclusao(LocalDateTime dataConclusao) {
+		this.dataConclusao = dataConclusao;
+	}
+
 	public Funcionario getResponsavel() {
 		return responsavel;
 	}
@@ -55,13 +69,19 @@ public class Tarefa {
 		this.responsavel = responsavel;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public Status getStatus() {
+		return status;
 	}
 
-	public LocalDateTime getDataConclusao() {
-		return dataConclusao;
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 
+
+	@Override
+	public String toString() {
+		return this.codigo + "," + this.titulo + "," + this.status + "," + this.descricao + "," + this.responsavel + ","
+				+ this.dataInicio + "," + this.dataConclusao + "," + this.dataPrazo + "\n";
+	}
 
 }
